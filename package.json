@@ -1,0 +1,32 @@
+{
+  "name": "next-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@truffle/hdwallet-provider": "^2.1.5",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.6",
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "autoprefixer": "^10.4.9",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0",
+    "ethereum-waffle": "^3.4.4",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
