@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import { React } from 'react'
-import { WalletConnect } from "../components/walletConnect"
 import { NavBar } from "../components/navBar"
 import Head from 'next/head'
 

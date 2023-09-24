@@ -9,6 +9,22 @@ import { WalletConnect } from "./walletConnect";
 // import { Web3Provider } from '@ethersproject/providers';
 // import { ethers, Wallet } from "ethers";
 
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum';
+import { Web3Modal, Web3Button } from '@web3modal/react';
+import { configureChains, createConfig } from 'wagmi';
+import { arbitrum, mainnet, polygon } from 'wagmi/chains';
+
+const projectId = 'ff07ed11408eda375acd8e017ed21f4c';
+
+const chains = [arbitrum, mainnet, polygon];
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, chains }),
+  publicClient
+});
+const ethereumClient = new EthereumClient(wagmiConfig, chains);
+
 export function NavBar() {
   // Top Navigation Bar Element
   return (
@@ -54,9 +70,8 @@ export function NavBar() {
                 Attend
               </p>
             </Link>
-            <button className="py-2 px-4 bg-red-600 border border-red-300 rounded-md text-sm font-semibold hover:bg-red-300 text-white whitespace-nowrap hover:shadow-indigo-800/50 hover:shadow-sm shadow-green-600/50 sm:overflow-hidden hover:ease-out hover:transition hover:duration-700">
-              Connect Wallet
-            </button>
+            <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+            <Web3Button />
           </div>
         </div>
       </div>
