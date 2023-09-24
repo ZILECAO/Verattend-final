@@ -8,15 +8,10 @@ function pendingApplicants() {
         <section className="bg-green-100 min-h-screen">
             <title>Manage This Event</title>
             <div class="row">
-            <div class="column">
-            <h1>Pending Participants</h1> 
+                <div class="column">Pending Participants</div>
+                <div class="column">Check-In Participants</div>
             </div>
-            <div class="column">
-            <h1>Approve</h1> 
-            </div>
-
-            </div>
-        </section>
+        </section >
     )
 }
 
