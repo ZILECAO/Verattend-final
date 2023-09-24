@@ -84,29 +84,29 @@ export default function Home() {
 
     // rendering the page
     return (
-        <section className="text-white pt-20 bg-green-100 min-h-screen">
+        <section className="text-white pt-20 bg-red-100 min-h-screen">
             <div className="pb-40 mx-auto max-w-screen-xl">
 
                 <div className="max-w-lg mx-auto text-center">
-                    <h2 className="pb-10 text-4xl font-extrabold text-green-600">
-                    Verattend Demo {"\n"}
+                    <h2 className="pb-10 text-4xl font-extrabold text-red-600">
+                        Verattend Demo {"\n"}
                     </h2>
                 </div>
 
                 <div className="m-6">
 
-                    <h2 className="flex mb-4 text-sm font-medium text-yellow-500">
+                    <h2 className="flex mb-4 text-sm font-medium text-zinc-500">
                         For below buttons to work, switch to Goerli Testnet on Metamask
                     </h2>
 
                     <h2 className="flex mb-4 text-sm font-medium text-green-600">
-                        Contract: <a className="ml-2 text-blue-600 underline hover:text-green-400" href="https://goerli.etherscan.io/address/0x2D53197C8Dfb493b64111BcA29286f613912a7BB#code">0x2D53197C8Dfb493b64111BcA29286f613912a7BB</a>
+                        Contract: <a className="ml-2 text-pur-600 underline hover:text-red-400" href="https://goerli.etherscan.io/address/0x2D53197C8Dfb493b64111BcA29286f613912a7BB#code">0x2D53197C8Dfb493b64111BcA29286f613912a7BB</a>
                     </h2>
 
 
 
                     {/* contract balanace button */}
-                    <a className="mr-4 p-2 text-sm font-medium text-white bg-green-400 hover:bg-zinc-700 rounded-md shadow">
+                    <a className="mr-4 p-2 text-sm font-medium text-white bg-red-400 hover:bg-zinc-700 rounded-md shadow">
                         <button onClick={() => getContractBalance()}>Balance</button>
 
                     </a>
@@ -116,7 +116,7 @@ export default function Home() {
 
 
                     {/* donate input */}
-                    <a className="mr-4 p-2 text-sm font-medium text-white bg-green-500 hover:bg-orange-700 rounded-md shadow">
+                    <a className="mr-4 p-2 text-sm font-medium text-white bg-red-500 hover:bg-orange-700 rounded-md shadow">
                         <button onClick={handleClick}>Donate</button>
 
                     </a>
@@ -133,7 +133,7 @@ export default function Home() {
 
 
                     {/* withdraw input */}
-                    <a className="mr-4 p-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-md shadow">
+                    <a className="mr-4 p-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-md shadow">
                         <button onClick={handleClickWithdraw}>Withdraw</button>
 
                     </a>
