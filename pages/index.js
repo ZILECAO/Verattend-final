@@ -2,7 +2,6 @@ import { ethers } from "ethers";
 import { useState } from "react";
 import { ContractABI } from '../components/contractABI.js';
 
-
 // create provider variable
 let provider;
 if (typeof window !== 'undefined' && typeof window.ethereum !== 'undefined') {
@@ -85,12 +84,12 @@ export default function Home() {
 
     // rendering the page
     return (
-        <section className="text-white ">
+        <section className="text-white pt-20 bg-green-100 min-h-screen">
             <div className="pb-40 mx-auto max-w-screen-xl">
 
                 <div className="max-w-lg mx-auto text-center">
-                    <h2 className="pb-10 text-4xl font-extrabold text-white">
-                        Crowdfunding dApp Demo {"\n"}
+                    <h2 className="pb-10 text-4xl font-extrabold text-green-600">
+                    Verattend Demo {"\n"}
                     </h2>
                 </div>
 
@@ -100,14 +99,14 @@ export default function Home() {
                         For below buttons to work, switch to Goerli Testnet on Metamask
                     </h2>
 
-                    <h2 className="flex mb-4 text-sm font-medium text-white">
-                        Contract: <a className="ml-2 text-blue-600 underline hover:text-blue-700" href="https://goerli.etherscan.io/address/0x2D53197C8Dfb493b64111BcA29286f613912a7BB#code">0x2D53197C8Dfb493b64111BcA29286f613912a7BB</a>
+                    <h2 className="flex mb-4 text-sm font-medium text-green-600">
+                        Contract: <a className="ml-2 text-blue-600 underline hover:text-green-400" href="https://goerli.etherscan.io/address/0x2D53197C8Dfb493b64111BcA29286f613912a7BB#code">0x2D53197C8Dfb493b64111BcA29286f613912a7BB</a>
                     </h2>
 
 
 
                     {/* contract balanace button */}
-                    <a className="mr-4 p-2 text-sm font-medium text-white bg-zinc-600 hover:bg-zinc-700 rounded-md shadow">
+                    <a className="mr-4 p-2 text-sm font-medium text-white bg-green-400 hover:bg-zinc-700 rounded-md shadow">
                         <button onClick={() => getContractBalance()}>Balance</button>
 
                     </a>
@@ -117,7 +116,7 @@ export default function Home() {
 
 
                     {/* donate input */}
-                    <a className="mr-4 p-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-md shadow">
+                    <a className="mr-4 p-2 text-sm font-medium text-white bg-green-500 hover:bg-orange-700 rounded-md shadow">
                         <button onClick={handleClick}>Donate</button>
 
                     </a>
