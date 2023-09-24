@@ -1,7 +1,7 @@
 import { ethers, BigNumber } from "ethers";
 import { useEffect, useState } from "react";
 import { Web3Provider } from '@ethersproject/providers';
-
+import { Button } from '@mui/material';
 export function WalletConnect() {
 
   // getting whether user is authenticated
@@ -74,6 +74,14 @@ export function WalletConnect() {
               : <button className="px-5 py-2.5 text-sm font-medium text-white bg-green-600 rounded-md shadow" onClick={() => connectWallet()}>Connect Wallet</button>
             }
           </a>
+          <Button
+            variant="contained"
+            position="absolute"
+            top="1rem"
+            bottom="1rem"
+            onClick={() => connectWallet()}>
+            Connect
+          </Button>
         </div>
         <div className="m-6">
           <p>

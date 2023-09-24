@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { ethers, BigNumber } from "ethers";
+import { ethers, BigNumber, Wallet } from "ethers";
 import { Web3Provider } from '@ethersproject/providers';
 // import { Animations } from "../variants/animations";
 import { WalletConnect } from "./walletConnect";
@@ -54,9 +54,11 @@ export function NavBar() {
                 Attend
               </p>
             </Link>
-            <button className="py-2 px-4 bg-red-600 border border-red-300 rounded-md text-sm font-semibold hover:bg-red-300 text-white whitespace-nowrap hover:shadow-indigo-800/50 hover:shadow-sm shadow-green-600/50 sm:overflow-hidden hover:ease-out hover:transition hover:duration-700">
-              Connect Wallet
-            </button>
+            {/* <WalletConnect /> */}
+            {/* <button className="py-2 px-4 bg-red-600 border border-red-300 rounded-md text-sm font-semibold hover:bg-red-300 text-white whitespace-nowrap hover:shadow-indigo-800/50 hover:shadow-sm shadow-green-600/50 sm:overflow-hidden hover:ease-out hover:transition hover:duration-700">
+              Connect Wallet */}
+            <WalletConnect />
+            {/* </button> */}
           </div>
         </div>
       </div>
